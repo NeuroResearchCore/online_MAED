@@ -50,7 +50,6 @@ if isfield(options,'ReguAlpha')
 end
 switch lower(options.Method)
     case {lower('Seq')}
-        size(K)
         [sampleList,values] = MAEDseq(K,options.modelSize,splitLabel,ReguAlpha);
         model.X=X(sampleList,:);
         model.Y=Y(sampleList,:);
